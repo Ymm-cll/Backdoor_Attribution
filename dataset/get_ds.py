@@ -6,12 +6,6 @@ from datasets import load_dataset
 
 random.seed(42)
 
-proxy = "http://10.31.100.51:7890"
-os.environ["proxy"] = proxy
-os.environ["http_proxy"] = proxy
-os.environ["https_proxy"] = proxy
-os.environ["ftp_proxy"] = proxy
-
 def get_ds(task_name):
     new_ds = []
     if "alpaca" in task_name:
